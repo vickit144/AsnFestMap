@@ -1,91 +1,48 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+        <title>Knoxville Asian Festival Map</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 <style>
     img {
         max-width: 1000px;
         margin: auto;
-
+         
     }
 
+   #festlawn{
+       position: absolute;
+       left: 250px;
+       top: 360px;
+   } 
 
-    .test {
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-    }
+   #perform{
+       position: absolute;
+       left: 830px;
+       top: 400px;
+   }
 
-    /* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
 </style>
 
-<img src="Screenshot (1).png" alt="Festival" usemap="#festMap">
+<body>
+    <div class="container mt-3">
+    <img src="Screenshot (1).png" alt="Festival" usemap="#festMap">
+
+    <map name="festMap">
+        <area id="festlawn" data-toggle="tooltip" shape="rect" coords="115,286,310,411" alt="FestLawn" title="Festival Lawn">  
+        <area id="perform" data-toggle="tooltip" shape="rect" coords="618,300,965,463" alt="performlawn" title="Performance Lawn">
+    </map>
+    </div>
 
 
-      
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
 
-
-<map name="festMap">
-    <area shape="rect" coords="115,286,310,411" alt="FestLawn" href="Screenshot (28).png" title="Closer map of Festival Lawn">  
-
-</map>
-      <script>
-      // When the user clicks on div, open the popup
-      function myFunction() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-      }
-      </script>
-
+</script>
+</body>
