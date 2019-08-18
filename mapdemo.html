@@ -9,35 +9,37 @@
 </head>
 <style>
     img {
-        max-width: 1000px;
+        max-width: 100%;
         margin: auto;
-         
+    }
+
+    .map {
+        width: 1000px;
     }
 
    #festlawn{
        position: absolute;
-       left: 250px;
+       left: 220px;
        top: 360px;
    } 
 
    #perform{
        position: absolute;
-       left: 830px;
-       top: 400px;
+       left: 790px;
+       top: 370px;
    }
 
 </style>
 
 <body>
-    <div class="container mt-3">
-    <img src="Screenshot (1).png" alt="Festival" usemap="#festMap">
+    <div class="container mt-3 map">
+    <img src="KnoxMap.png" alt="Festival" usemap="#festMap">
 
     <map name="festMap">
         <area id="festlawn" data-toggle="tooltip" shape="rect" coords="115,286,310,411" alt="FestLawn" title="Festival Lawn">  
-        <area id="perform" data-toggle="tooltip" shape="rect" coords="618,300,965,463" alt="performlawn" title="Performance Lawn">
+        <area shape="rect" coords="618,300,965,463" alt="performlawn" title="Performance Lawn" href="foodmap.html">
     </map>
     </div>
-
 
 <script>
         $(document).ready(function(){
